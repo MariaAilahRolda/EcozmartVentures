@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio - Active Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+      Ecozmart Ventures Incorporated
+    </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,55 +26,34 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Active
-  * Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
+  </head>
 
-<body class="portfolio-page">
+<body class="index-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Active.</h1>
+        <img src="assets/img/logo.png" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
+          <li>
+            <a href="index.html" class="nav-link" aria-disabled="false">Home</a>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="products.html" class="nav-link active" aria-disabled="false">Products</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link" aria-disabled="true">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link" aria-disabled="true">Contact Us</a>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -83,13 +64,13 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title light-background">
+    <div class="page-title">
       <div class="container">
-        <h1>Portfolio</h1>
+        <h1>Products</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio</li>
+            <li class="current">Products</li>
           </ol>
         </nav>
       </div>
@@ -104,9 +85,14 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
+            <li data-filter=".filter-app">OJO</li>
+            <li data-filter=".filter-product">Pattex</li>
+            <li data-filter=".filter-branding">T-Rex</li>
+            <li data-filter=".filter-branding">Tangit</li>
+            <li data-filter=".filter-branding">Ecoboards</li>
+            <li data-filter=".filter-branding">SmartFlex</li>
+            <li data-filter=".filter-branding">SmartBoards</li>
+            <li data-filter=".filter-branding">Laticrete</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -208,93 +194,6 @@
       </div>
 
     </section><!-- /Portfolio Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-7">
-            <div class="swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "breakpoints": {
-                    "320": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 40
-                    },
-                    "1200": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 1
-                    }
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/testimonials/testimonials-1.jpg" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Adam Aderson</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/testimonials/testimonials-2.jpg" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Lukas Devlin</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/testimonials/testimonials-3.jpg" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Kayla Bryant</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Testimonials Section -->
-
   </main>
 
   <footer id="footer" class="footer light-background">
@@ -302,98 +201,59 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
           <div class="widget">
-            <h3 class="widget-heading">About Us</h3>
+            <h3 class="widget-heading">Address:</h3>
             <p class="mb-4">
-              There live the blind texts. Separated they live in Bookmarksgrove
-              right at the coast of the Semantics, a large language ocean.
+              2nd Floor JSO Building, 210 Katipunan Avenue, Blue Ridge A, Quezon City
             </p>
             <p class="mb-0">
-              <a href="#" class="btn-learn-more">Learn more</a>
+              <a href="contact.html" class="btn-learn-more">Contact Us</a>
             </p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
-            <h3 class="widget-heading">Navigation</h3>
+            <h3 class="widget-heading">Products</h3>
             <ul class="list-unstyled float-start me-5">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Find Buyers</a></li>
+              <li><a href="#">OJO</a></li>
+              <li><a href="#">Pattex</a></li>
+              <li><a href="#">T-Rex</a></li>
+              <li><a href="#">Tangit</a></li>
             </ul>
             <ul class="list-unstyled float-start">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
+              <li><a href="#">Ecoboards</a></li>
+              <li><a href="#">Smartflex</a></li>
+              <li><a href="#">Smartwood</a></li>
+              <li><a href="#">Laticrete</a></li>
             </ul>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
+        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
-            <h3 class="widget-heading">Recent Posts</h3>
-            <ul class="list-unstyled footer-blog-entry">
-              <li>
-                <span class="d-block date">May 3, 2020</span>
-                <a href="#">There live the Blind Texts</a>
-              </li>
-              <li>
-                <span class="d-block date">May 3, 2020</span>
-                <a href="#">Separated they live in Bookmarksgrove right</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          <div class="widget">
-            <h3 class="widget-heading">Connect</h3>
+            <h3 class="widget-heading">Connect with us</h3>
             <ul class="list-unstyled social-icons light mb-3">
               <li>
-                <a href="#"><span class="bi bi-facebook"></span></a>
+                <a href="https://www.facebook.com/profile.php?id=61562783469999"><span class="bi bi-facebook"></span></a>
               </li>
               <li>
-                <a href="#"><span class="bi bi-twitter-x"></span></a>
+                <a href="https://www.instagram.com/ecozmartph/"><span class="bi bi-instagram"></span></a>
               </li>
               <li>
-                <a href="#"><span class="bi bi-linkedin"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="bi bi-google"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="bi bi-google-play"></span></a>
+                <a href="https://www.linkedin.com/company/ecozmart/about/"><span class="bi bi-linkedin"></span></a>
               </li>
             </ul>
           </div>
+        </div>
 
+        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
             <div class="footer-subscribe">
-              <h3 class="widget-heading">Subscribe</h3>
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
-                <div class="mb-2">
-                  <input type="text" class="form-control" name="email" placeholder="Enter your email">
-
-                  <button type="submit" class="btn btn-link">
-                    <span class="bi bi-arrow-right"></span>
-                  </button>
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
-                </div>
-              </form>
+              <h3 class="widget-heading">Office Hours</h3>
+              <p class="mb-4">
+                Monday to Friday - 9:00am to 5:00pm<br>
+                Saturday  - 9:00am to 12:00pm
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Active.</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </div>
