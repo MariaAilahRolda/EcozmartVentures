@@ -983,7 +983,12 @@ section,
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
-
+.fb-post{
+  background-color: #f3f4f4;
+}
+.fb-font{
+  color: #FEFAE0;
+}
 
 
 /*========== Works ==========*/
@@ -1014,7 +1019,7 @@ section,
   margin-top: 20px;
 }
 .box2:hover {
-  height: 330px;
+  height: 300px;
 }
 
 .box2 .imgBx {
