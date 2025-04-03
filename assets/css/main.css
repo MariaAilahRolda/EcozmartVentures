@@ -899,6 +899,12 @@ section,
   height: 2px;
   background: var(--accent-color);
 }
+.carouselSize{
+  width: 100%;
+  max-width: 1600px;
+  height: 840px;
+  margin: auto;
+}
 
 /*--------------------------------------------------------------
 # Blog Posts Section
