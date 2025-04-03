@@ -121,6 +121,26 @@
 
   window.addEventListener("load", initSwiper);
 
+  document.querySelectorAll('.filter-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the page from refreshing
+
+        let filterValue = this.getAttribute('data-filter');
+
+        // Example: Filtering elements (adjust as needed)
+        document.querySelectorAll('.filter-item').forEach(item => {
+            if (item.classList.contains(filterValue.replace('.', ''))) {
+                item.style.display = 'block'; // Show matching items
+            } else {
+                item.style.display = 'none'; // Hide non-matching items
+            }
+        });
+    });
+});
+  
+
+
+
   /**
    * Initiate Pure Counter
    */
