@@ -161,10 +161,33 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+.carousel-inner img {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+}
 
-#carouselExampleAutoplaying {
-  margin-top: 0 !important; /* Removes any top margin */
-  padding-top: 0; /* Ensures no unwanted spacing */
+.fb-embed-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio, adjust as needed */
+}
+
+.fb-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: hidden;
+}
+
+.fb-post-container {
+  margin-bottom: 2rem;
+  background-color: #1a1a1a; /* Optional dark background */
+  padding: 1rem;
+  border-radius: 12px;
 }
 
 
@@ -1165,196 +1188,73 @@ section,
   opacity: 1;
   bottom: 0;
 }
-
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
+/* Product Image Styling */
+.productImage {
+ 
+  padding: 2rem 1rem;
 }
 
-.portfolio-details .swiper-wrapper {
+.product-img {
+  max-width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
-.portfolio-details .swiper-button-prev,
-.portfolio-details .swiper-button-next {
-  width: 48px;
-  height: 48px;
+/* Description Styling T-Rex */
+.portfolio-description {
+  padding: 2rem 1rem;
+  color: #f8f9fa;
 }
 
-.portfolio-details .swiper-button-prev:after,
-.portfolio-details .swiper-button-next:after {
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.15);
-  font-size: 24px;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.portfolio-details .swiper-button-prev:hover:after,
-.portfolio-details .swiper-button-next:hover:after {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 575px) {
-
-  .portfolio-details .swiper-button-prev,
-  .portfolio-details .swiper-button-next {
-    display: none;
-  }
-}
-
-.portfolio-details .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
+.product-title {
+  font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
+  color: #FFCF50  ;
+  margin-bottom: 0.5rem;
 }
 
-.portfolio-details .portfolio-info h3:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  bottom: 0;
+.product-subtitle {
+  font-size: 1.25rem;
+  color: #343a40;
+  margin-bottom: 1.5rem;
 }
 
-.portfolio-details .portfolio-info ul {
+.product-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #f8f9fa;
+}
+
+.features-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.feature-list {
   list-style: none;
-  padding: 0;
-  font-size: 15px;
+  padding-left: 0;
 }
 
-.portfolio-details .portfolio-info ul li {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
-}
-
-.portfolio-details .portfolio-info ul strong {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 14px;
-}
-
-.portfolio-details .portfolio-info .btn-visit {
-  padding: 8px 40px;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.portfolio-details .portfolio-info .btn-visit:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.portfolio-details .portfolio-description h1 {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: #FEFAE0;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #FEFAE0;
-}
-.keyFeat {
-  font-size: 20px;
-  font-weight: 600;
-  color: #3C3D37;
-}
-
-.portfolio-details .portfolio-description .desc {
-  font-size: 20px;
-  font-weight: 400;
-  color:#3C3D37
-}
-
-.portfolio-details .portfolio-description .testimonial-item {
-  padding: 30px 30px 0 30px;
+.feature-list li {
   position: relative;
-  background: color-mix(in srgb, var(--default-color), transparent 97%);
-  margin-bottom: 50px;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f8f9fa;
+  line-height: 1.6;
 }
 
-.portfolio-details .portfolio-description .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50px;
-  border: 6px solid var(--background-color);
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-.portfolio-details .portfolio-description .testimonial-item h3 {
-  font-size: 18px;
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
   font-weight: bold;
-  margin: 15px 0 5px 0;
-  padding-top: 20px;
 }
 
-.portfolio-details .portfolio-description .testimonial-item h4 {
-  font-size: 14px;
-  color: #6c757d;
-  margin: 0;
-}
 
-.portfolio-details .portfolio-description .testimonial-item .quote-icon-left,
-.portfolio-details .portfolio-description .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.portfolio-details .portfolio-description .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-description .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.portfolio-details .portfolio-description .testimonial-item p {
-  font-style: italic;
-  margin: 0 0 15px 0 0 0;
-  padding: 0;
-}
 
 /*--------------------------------------------------------------
 # Contact Section
