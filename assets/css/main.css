@@ -1276,14 +1276,29 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
+.portfolio-details .portfolio-description h1 {
+  font-size: 30px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  color: #FEFAE0;
 }
 
-.portfolio-details .portfolio-description p {
-  padding: 0;
+.portfolio-details .portfolio-description h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #FEFAE0;
+}
+.keyFeat {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3C3D37;
+}
+
+.portfolio-details .portfolio-description .desc {
+  font-size: 20px;
+  font-weight: 400;
+  color:#3C3D37
 }
 
 .portfolio-details .portfolio-description .testimonial-item {
