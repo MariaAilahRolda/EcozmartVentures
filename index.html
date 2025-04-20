@@ -16,8 +16,8 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
 
   <main class="main">
 
-    <!-- About Section -->  
+    <!-- About Section  
     <section id="about" class="about section">
 
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -96,25 +96,54 @@
         </button>
       </div>
       
-    </section><!-- /About Section -->
+    </section> /About Section -->
+
+    <!-- Image Slider -->
+    <section id="about" class="about section">
+        <div id="carouselExampleIndicators" class="carousel slide slider-container" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets\img\slide\slideOJO1.png" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\img\slide\slideOJO2.png" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\img\slide\slidePattex.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\img\slide\slideTangit.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\img\slide\slideTrex.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\img\slide\slideEco.png" class="d-block w-100" alt="Slide 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
 
     
     
     <!-- About 2 Section -->
     <section id="about-2" class="about-2 section light-background">
-      
-      <!-- Section Title
-      <div class="container section-title " data-aos="fade-up">
-        <h1>Sustainable and Smart living</h1>
-      </div>End Section Title -->
-
-      <!-- Section Title -->
-      <div class="container section-title eco-slogan" data-aos="fade-up">
-        <h1>Sustainable and Smart Living</h1>
-      </div>
-      <!-- End Section Title -->
-
-
       <section class="works section bd-container" id="works" data-aos="fade-up">
         <h2 class="section-title-sub">Our Brands</h2>
         <div class="works__container2 bd-grid">
@@ -229,65 +258,79 @@
 
   <footer id="footer" class="footer light-background">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+      <div class="row gy-4">
+        <!-- Address -->
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="widget">
             <h3 class="widget-heading">Address:</h3>
-            <p class="mb-4">
-              2nd Floor JSO Building, 210 Katipunan Avenue, Blue Ridge A, Quezon City
-            </p>
-            <p class="mb-0">
-              <a href="contact.html" class="btn-learn-more">Contact Us</a>
-            </p>
+            <p>2nd Floor JSO Building, 210 Katipunan Avenue, Blue Ridge A, Quezon City</p>
+            <a href="contact.html" class="btn-learn-more">Contact Us</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+  
+        <!-- Brands -->
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="widget">
             <h3 class="widget-heading">Our Brands</h3>
-            <ul class="list-unstyled float-start me-5">
-              <li>OJO</li>
-              <li>Pattex</li>
-              <li>T-Rex</li>
-              <li>Tangit</li>
-            </ul>
-            <ul class="list-unstyled float-start">
-              <li>Ecoboards</li>
-              <li>Smartflex</li>
-              <li>Laticrete</li>
-            </ul>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>OJO</li>
+                  <li>Pattex</li>
+                  <li>T-Rex</li>
+                  <li>Tangit</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>Ecoboards</li>
+                  <li>Smartflex</li>
+                  <li>Laticrete</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+  
+        <!-- Social Icons -->
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="widget">
             <h3 class="widget-heading">Connect with us</h3>
-            <ul class="list-unstyled social-icons light mb-3">
+            <ul class="list-unstyled social-icons d-flex gap-3">
               <li>
-                <a href="https://www.facebook.com/profile.php?id=61562783469999"><span class="bi bi-facebook"></span></a>
+                <a href="https://www.facebook.com/profile.php?id=61562783469999" aria-label="Facebook">
+                  <span class="bi bi-facebook"></span>
+                </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/ecozmartph/"><span class="bi bi-instagram"></span></a>
+                <a href="https://www.instagram.com/ecozmartph/" aria-label="Instagram">
+                  <span class="bi bi-instagram"></span>
+                </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/ecozmart/about/"><span class="bi bi-linkedin"></span></a>
+                <a href="https://www.linkedin.com/company/ecozmart/about/" aria-label="LinkedIn">
+                  <span class="bi bi-linkedin"></span>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+  
+        <!-- Office Hours -->
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="widget">
-            <div class="footer-subscribe">
-              <h3 class="widget-heading">Office Hours</h3>
-              <p class="mb-4">
-                Monday to Friday - 9:00am to 5:00pm<br>
-                Saturday  - 9:00am to 12:00pm
-              </p>
-            </div>
+            <h3 class="widget-heading">Office Hours</h3>
+            <p>
+              Monday to Friday: 9:00 AM – 5:00 PM<br>
+              Saturday: 9:00 AM – 12:00 PM
+            </p>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  
+  
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
