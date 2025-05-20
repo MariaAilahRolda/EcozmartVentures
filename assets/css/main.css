@@ -836,20 +836,51 @@ h6 {
   color: #F8F7F2;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
   font-weight: 500;
+  font-size: 30px;
 }
 .product-subtitle{
   color: #FFA500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 26px;
 }
+.product-subtitle2 {
+  color: #FFA500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  font-size: 26px;
+  text-align: center; /* ✅ Center text horizontally */
+  margin-top: 10px;
+}
+
 .features-heading {
   color: #FFA500;
   text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.7);
-  font-weight: 500;
-  font-size: 26px;
+  font-weight: 400;
+  font-size: 24px;
   text-align: center;
   text-transform: capitalize;
+}
+.features-heading2 {
+  color: #FFA500;
+  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  font-size: 24px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.downloadLink {
+  color: #FFA500;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Slightly softer shadow */
+  font-weight: 500;
+  text-align: center; /* Effective only if element is block or inline-block */
+  text-transform: capitalize;
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Makes text-align work properly if needed */
+}
+
+.downloadLink:hover {
+  text-decoration: underline; /* Adds a hover effect */
 }
 .vid {
   color: #2F2F2F;
@@ -858,11 +889,75 @@ h6 {
   font-size: 30px;
   text-align: center;
   text-transform: capitalize;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .product-desc, .feature-list{
+  margin-top: 20px;
   color: #F8F7F2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
 }
+.product-desc2{
+  margin-top: 20px;
+  color: #F8F7F2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+  text-align: left;
+}
+.feature-list{
+  font-weight: 300;
+}
+
+.magnifier-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lens {
+  position: absolute;
+  border: 2px solid #000;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200%;
+  pointer-events: none;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 10;
+}
+.color-selector {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.color-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+  border-color: #000;
+}
+
 
 /*--------------------------------------------------------------
 # Global Sections
