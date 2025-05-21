@@ -959,6 +959,29 @@ h6 {
 }
 
 
+.color-selector2 button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
