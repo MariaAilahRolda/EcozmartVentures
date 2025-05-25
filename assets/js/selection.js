@@ -18,7 +18,10 @@
 
     LeaksWhite: "assets/img/products/OJO/LeaksWhite.png",
     LeaksClear: "assets/img/products/OJO/LeaksClear.png",
-    LeaksGrey: "assets/img/products/OJO/LeaksGrey.png"
+    LeaksGrey: "assets/img/products/OJO/LeaksGrey.png",
+
+    Adhesive15: "assets/img/products/Pattex/Adhesive15.jpg",
+    Adhesive40: "assets/img/products/Pattex/Adhesive40.jpg"
 
   };
 

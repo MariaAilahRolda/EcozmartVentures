@@ -898,6 +898,14 @@ h6 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
 }
+.product-desc3{
+  font-size: 25px;
+  margin-top: 20px;
+  color: #F8F7F2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  text-align: center;
+}
 .product-desc2{
   margin-top: 20px;
   color: #F8F7F2;
@@ -921,6 +929,14 @@ h6 {
   width: 100%;
   height: auto;
   display: block;
+}
+.customerImg{
+  width: 100%;
+  max-width: 400px; /* Optional: limit max size */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+  
 }
 
 .lens {
