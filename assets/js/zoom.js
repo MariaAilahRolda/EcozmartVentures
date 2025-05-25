@@ -1,4 +1,4 @@
-const image = document.getElementById("productImage");
+  const image = document.getElementById("productImage");
   const container = image.parentElement;
 
   const lens = document.createElement("div");
