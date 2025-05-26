@@ -9,7 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     Grout1639: "Mushroom",
     Grout1688: "Smoke Grey",
     Grout1660: "Dusty Grey",
-    Grout1678: "Sterling Silver"
+    Grout1678: "Sterling Silver",
+
+    White:"White",
+    Grey:"Grey"
   };
 
 document.querySelectorAll(".color-swatch").forEach(swatch => {

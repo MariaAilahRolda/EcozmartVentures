@@ -269,11 +269,7 @@ h6 {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-
+ 
   .mobile-nav-active {
     overflow: hidden;
   }
@@ -1142,6 +1138,7 @@ section,
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
+
 }
 
 .portfolio .portfolio-filters li {
@@ -1157,12 +1154,14 @@ section,
   transition: all 0.3s ease-in-out;
   font-family: Poppins;
   text-transform: uppercase;
+  color: #F4F4F2;
 }
 
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: #FFA500;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Slightly softer shadow */
+  font-weight: 500;
 }
 
 .portfolio .portfolio-filters li:first-child {
