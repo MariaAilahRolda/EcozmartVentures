@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
     Grout1635: "Mocha",
     Grout1622: "Midnight Black",
     Grout1639: "Mushroom",
-    Grout1688: "Smoke Grey",
+    Grout1689: "Smoke Grey",
     Grout1660: "Dusty Grey",
     Grout1678: "Sterling Silver",
 
     White:"White",
-    Grey:"Grey"
+    Grey:"Grey",
+
+    BlueHawaii: "Blue Hawaii"
   };
 
 document.querySelectorAll(".color-swatch").forEach(swatch => {
