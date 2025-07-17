@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>
-      Ecozmart Ventures Incorporated
-    </title>
+      Ecozmart Ventures Incorporated - Contact</title>
     <meta name="description" content="Contact Ecozmart Ventures Inc. for product inquiries, support, or business opportunities.">
     <meta name="keywords" content="Ecozmart, contact, construction, adhesive, building materials">
 
@@ -25,15 +24,18 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    
+    <script src="script.js"></script>
     <script type="text/javascript">
     (function(){
     emailjs.init("bNs_OpK0HIWQ4dSOt");
     })();
   </script>
-  <script src="script.js"> </script>
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("bNs_OpK0HIWQ4dSOt");
+      })()
+        </script>
 
   </head>
 
@@ -49,16 +51,16 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li>
-            <a href="index.html" class="nav-link" aria-disabled="false">Home</a>
+            <a href="index.html">Home</a>
           </li>
           <li>
-            <a href="products.html" class="nav-link" aria-disabled="false">Products</a>
+            <a href="products.html">Products</a>
           </li>
           <li>
-            <a href="about.html" class="nav-link" aria-disabled="true">About Us</a>
+            <a href="about.html">About Us</a>
           </li>
           <li>
-            <a href="contact.html" class="nav-link active" aria-current="page">Contact Us</a>
+            <a href="contact.html" class="active" aria-current="page">Contact Us</a>
           </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -121,7 +123,7 @@
                   
                       <div style="width: 100%">
                       <iframe
-                        src="src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
                       width="100%" height="250" 
                       style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
@@ -135,31 +137,30 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="form-group">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" id="name" required placeholder="Your Name">
+                  <input type="text" id="name" name="from_name" required class="form-control" placeholder="Your Name">
                     </div>
                 <div class="form-group">
-                  <label for="email">Email"</label>
-                  <input type="email" id="email" name="email" required>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="reply_to" required class="form-control" placeholder="Your Email">
                 </div>
-                
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
+                <input type="text" id="subject" name="subject" required class="form-control" placeholder="Subject">
               </div>
-              
+                
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <textarea id="message" name="message" rows="4" required class="form-control" placeholder="Your message"></textarea>
               </div>
               
               <div class="my-3">
                 <div class="loading">Loading...</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="error-message" style="display:none;color:red;"></div>
+                <div class="sent-message style="display:none;color:green;">Your message has been sent. Thank you!</div>
               </div>
               
               <div class="text-center">
-                <button type="submit" onclick="sendMail()">Send Message</button>
+                <button type="button" onclick="sendMail()" class btn-primary">Send Message</button>
               </div>
             </form>
           </div>
