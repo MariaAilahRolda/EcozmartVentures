@@ -25,7 +25,13 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
+    
+    <script type="text/javascript">
+    (function(){
+    emailjs.init(bNs_OpK0HIWQ4dSOt);
+    })();
+  </script>
+  <script src="script.js"> </script>
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
@@ -130,22 +136,23 @@
           </div>
           <div class="col-lg-8">
             <form action="forms\contact.php" method="post" role="form" class="php-email-form">
-              
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" id="name" required
+                    </div>
+                <div class="form-group">
+                  <label for="email"Email"</label>
+                  <input type="email" id="email" name="email" required>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
+                
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
               </div>
               
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" id="message" placeholder="Message" rows="5" required></textarea>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
               </div>
               
               <div class="my-3">
@@ -155,7 +162,7 @@
               </div>
               
               <div class="text-center">
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" on click="sendMail()"></button>
               </div>
             </form>
           </div>
