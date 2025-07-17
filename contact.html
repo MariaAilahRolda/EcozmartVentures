@@ -7,8 +7,8 @@
     <title>
       Ecozmart Ventures Incorporated
     </title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Contact Ecozmart Ventures Inc. for product inquiries, support, or business opportunities.">
+    <meta name="keywords" content="Ecozmart, contact, construction, adhesive, building materials">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -28,7 +28,7 @@
     
     <script type="text/javascript">
     (function(){
-    emailjs.init(bNs_OpK0HIWQ4dSOt);
+    emailjs.init("bNs_OpK0HIWQ4dSOt");
     })();
   </script>
   <script src="script.js"> </script>
@@ -58,7 +58,7 @@
             <a href="about.html" class="nav-link" aria-disabled="true">About Us</a>
           </li>
           <li>
-            <a href="contact.html" class="nav-link active" aria-disabled="true">Contact Us</a>
+            <a href="contact.html" class="nav-link active" aria-current="page">Contact Us</a>
           </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -118,16 +118,13 @@
                 <i class="bi bi-geo-alt"></i>
                 <div>
                   <h4>Location:</h4>
-                  <p>
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
-                      width="210" 
-                      height="250" 
-                      style="border:0;" 
-                      allowfullscreen="" 
-                      loading="lazy">
+                  
+                      <div style="width: 100%">
+                      <iframe
+                        src="src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
+                      width="100%" height="250" 
+                      style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
-                  </p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -135,13 +132,13 @@
 
           </div>
           <div class="col-lg-8">
-            <form action="forms\contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="form-group">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" id="name" required
+                  <input type="text" name="name" id="name" required placeholder="Your Name">
                     </div>
                 <div class="form-group">
-                  <label for="email"Email"</label>
+                  <label for="email">Email"</label>
                   <input type="email" id="email" name="email" required>
                 </div>
                 
@@ -162,7 +159,7 @@
               </div>
               
               <div class="text-center">
-                <button type="submit" on click="sendMail()"></button>
+                <button type="submit" onclick="sendMail()">Send Message</button>
               </div>
             </form>
           </div>
