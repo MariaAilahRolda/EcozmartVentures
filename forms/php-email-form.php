@@ -1,18 +1,25 @@
 <?php
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
   $receiving_email_address = 'ailah23.rolda@gmail.com';
 
   // Correct path to the PHP Email Form library
   $php_email_form = 'assets/vendor/php-email-form/php-email-form.php';
 
   // Check if the PHP file exists and include it
-  if (file_exists($php_email_form))
+  if (file_exists(C:\filename:$php_email_form)) {
     include($php_email_form);
-   else {
+  } else {
     die('Unable to load the "PHP Email Form" Library!');
   }
 
   // Create a new form handler object
-  $contact = new $PHP_Email_form;
+  $contact = new PHP_Email_Form;
   $contact->ajax = true;
 
   // Set email parameters from form data
@@ -28,6 +35,7 @@
     'username' => 'your_username',
     'password' => 'your_password',
     'port' => '587'
+    'encryption' => 'tls'
   );
   */
 
