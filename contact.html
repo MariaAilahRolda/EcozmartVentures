@@ -30,11 +30,11 @@
     emailjs.init("bNs_OpK0HIWQ4dSOt");
     })();
   </script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       (function() {
         emailjs.init("bNs_OpK0HIWQ4dSOt");
-      })()
+      })();
         </script>
 
   </head>
@@ -160,7 +160,7 @@
               </div>
               
               <div class="text-center">
-                <button type="button" onclick="sendMail()" class btn-primary">Send Message</button>
+                <button type="button" onclick="sendMail()" class="btn-primary">Send Message</button>
               </div>
             </form>
           </div>
@@ -254,6 +254,19 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function sendmail() {
+      const parms = {
+        from_name: document.getElementById("name").Value,
+        reply_to: document.getElementById("email").Value,
+        subject: document.getElementById("subject").Value,
+        message: document.getElementById("message).Value 
+    };
+      emailjs.send("service_rqa9c3n", "template_d46nlpj", parms
+        .then(function(response) {
+          alert(" Message sent successfully!");
+          document.
+  </script>
 
 </body>
 
