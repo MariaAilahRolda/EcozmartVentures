@@ -25,6 +25,12 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
+<<<<<<< Updated upstream
+=======
+  <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+>>>>>>> Stashed changes
     <style>
       .loading::after {
         content: '';
@@ -145,8 +151,43 @@
             </div>
 
           </div>
+
           <div class="col-lg-8">
+<<<<<<< Updated upstream
             <form role="form" class="php-email-form">
+=======
+
+            <form action="forms\contact.php" method="post" role="form" class="php-email-form">
+              
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" id="message" placeholder="Message" rows="5" required></textarea>
+              </div>
+              
+              <div class="my-3">
+                <div class="loading">Loading...</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </form>
+            <!--<form role="form" class="php-email-form">
+>>>>>>> Stashed changes
                 <div class="form-group">
                   <label for="name">Your Name</label>
                   <input type="text" id="name" name="from_name" required class="form-control" placeholder="Your Name">
@@ -174,7 +215,7 @@
               <div class="text-center">
                 <button type="button" onclick="sendmail()" class="btn btn-primary">Send Message</button>
               </div>
-            </form>
+            </form>-->
           </div>
           <!-- End Contact Form -->
           
@@ -182,8 +223,7 @@
         </div>
 
       </div>
-    </section><!-- /Contact Section -->
-
+    </section>
   </main>
 
   <footer id="footer" class="footer light-background">
