@@ -24,6 +24,23 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <style>
+      .loading::after {
+        content: '';
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        margin-left: 10px;
+        border: 3px solid #007bff;
+        border-top: 3px solid transparent;
+        border-radius: 50%;
+        animation: spin 0.6s linear infinite;
+      }
+      @keyframes spin {
+        to {transform:rotate(360deg); }
+      }
+        </style>
     <script src="script.js"></script>
     <script type="text/javascript">
     (function(){
@@ -35,6 +52,30 @@
       (function() {
         emailjs.init("bNs_OpK0HIWQ4dSOt");
       })();
+      function sendmail() {
+        // show loader
+        document.querySelector(".loading").style.display = "block";
+        document.querySelector(".error-message").style.display = "none";
+        document.querySelector(".sent-message").style.display = "none";
+
+        const parms = {
+          from_name: document.getElementById("name").value,
+          reply_to: document.getElementById("email").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value
+        } ;
+
+        emailjs.send("service_rqa9c3n", "template_d46nlpj", parms)
+        .then(function (response) {
+          document.querySelector(".loading").style.display = "none";
+          document.querySelector(".sent-message").style.display = "block";
+          document.querySelector("form").reset();
+        }, function (error) {
+          document.querySelector(".loading").style.display = "none";
+          document.querySelector(".error-message").style.display = "block";
+          document.querySelector(".error-message").innerText = "Failed to send: " + error.text;
+        });
+      }
         </script>
 
   </head>
@@ -153,10 +194,10 @@
                 <textarea id="message" name="message" rows="4" required class="form-control" placeholder="Your message"></textarea>
               </div>
               
-              <div class="my-3">
-                <div class="loading">Loading...</div>
+              <div class="my-3"> 
+                <div class="loading" style="display: none;">Sending message...</div>
                 <div class="error-message" style="display:none;color:red;"></div>
-                <div class="sent-message style="display:none;color:green;">Your message has been sent. Thank you!</div>
+                <div class="sent-message" style="display:none;color:green;">Your message has been sent. Thank you!</div>
               </div>
               
               <div class="text-center">
@@ -257,10 +298,10 @@
   <script>
     function sendmail() {
       const parms = {
-        from_name: document.getElementById("name").Value,
-        reply_to: document.getElementById("email").Value,
-        subject: document.getElementById("subject").Value,
-        message: document.getElementById("message).Value 
+        from_name: document.getElementById("name").value,
+        reply_to: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message).value 
     };
       emailjs.send("service_rqa9c3n", "template_d46nlpj", parms
         .then(function(response) {
