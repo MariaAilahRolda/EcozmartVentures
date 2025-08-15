@@ -1,312 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>
-      Ecozmart Ventures Incorporated
-    </title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+<head>
+  <meta charset="utf-8">
+  <title>Ecozmart Ventures Incorporated - Contact</title>
+  <meta name="description" content="Contact Ecozmart Ventures Inc. for product inquiries, support, or business opportunities.">
+  <meta name="keywords" content="Ecozmart, contact, construction, adhesive, building materials">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/favicon.png" rel="apple-touch-icon">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-
-    <!-- Main CSS File -->
-    <link href="assets\css\main.css" rel="stylesheet">
-
-    <script src="script.js"></script>
-    <script type="text/javascript">
-    (function(){
-    emailjs.init("bNs_OpK0HIWQ4dSOt");
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
     })();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-      (function() {
-        emailjs.init("bNs_OpK0HIWQ4dSOt");
-      })();
-        </script>
 
-  </head>
+  <style>
+    .loading { display: none; color: blue; }
+    .sent-message { display: none; color: green; }
+    .error-message { display: none; color: red; }
+    form { max-width: 400px; margin: auto; }
+    .form-group { margin-bottom: 10px; }
+    label { display: block; font-weight: bold; }
+    input, textarea { width: 100%; padding: 8px; }
+    button { padding: 10px 15px; cursor: pointer; }
+  </style>
+</head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <h1>Contact Ecozmart Ventures Inc.</h1>
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="index.html" class="nav-link" aria-disabled="false">Home</a>
-          </li>
-          <li>
-            <a href="products.html" class="nav-link" aria-disabled="false">Products</a>
-          </li>
-          <li>
-            <a href="about.html" class="nav-link" aria-disabled="true">About Us</a>
-          </li>
-          <li>
-            <a href="contact.html" class="nav-link active" aria-disabled="true">Contact Us</a>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="container">
-        <h1>Contact</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Contact Us</li>
-          </ol>
-        </nav>
+  <form id="contact-form" onsubmit="sendMail(event)">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" required placeholder="Your Name">
       </div>
-    </div><!-- End Page Title -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section" data-aos="fade-up" data-aos-delay="200">
-        <div class="container" data-aos="fade">
-          <div class="row gy-5 gx-lg-5">
-
-            <!-- Contact Info Column -->
-            <div class="col-lg-4">
-              <div class="info">
-                <h3>Better yet, see us in person!</h3>
-                <p>We love our customers, so feel free to visit during normal business hours.</p>
-
-                <div class="info-item d-flex">
-                  <i class="bi bi-geo flex-shrink-0"></i>
-                  <div>
-                    <h4>Address:</h4>
-                    <p>2nd Floor JSO building, 210 Katipunan Avenue, Blue Ridge A, Quezon City</p>
-                  </div>
-                </div>
-
-                <div class="info-item d-flex">
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                  <div>
-                    <h4>Email:</h4>
-                    <p>info@ecozmart.ph</p>
-                  </div>
-                </div>
-
-                <div class="info-item d-flex">
-                  <i class="bi bi-telephone flex-shrink-0"></i>
-                  <div>
-                    <h4>Call:</h4>
-                    <p>+632 8741 2272</p>
-                  </div>
-                </div>
-
-                <div class="info-item d-flex">
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h4>Location:</h4>
-                    <div style="width: 100%">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-                      </iframe>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Contact Form Column -->
-            <div class="col-lg-8">
-              <form id="contact-form" action="#" onsubmit="sendmail(); return false;" class="php-email-form" novalidate>
-
-                <div class="row g-2">
-                  <div class="form-group col-6">
-                    <div class="p-0">
-                      <label for="name"></label>
-                      <input type="text" id="name" name="from_name" required class="form-control" placeholder="Your Name">
-                    </div>
-                  </div>
-
-                  <div class="form-group col-6">
-                    <div class="p-0">
-                      <label for="email"></label>
-                      <input type="email" id="email" name="reply_to" required class="form-control" placeholder="Your Email">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group mt-3">
-                  <label for="subject"></label>
-                  <input type="text" id="subject" name="subject" required class="form-control" placeholder="Subject">
-                </div>
-
-                <div class="form-group mt-3">
-                  <label for="message"></label>
-                  <textarea id="message" name="message" rows="5" required class="form-control" placeholder="Your Message"></textarea>
-                </div>
-
-                <div class="my-3">
-                  <div class="loading" style="display: none;">Sending message...</div>
-                  <div class="error-message" style="display:none;"></div>
-                  <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
-                </div>
-
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Send Message</button>
-                </div>
-              </form>
-            </div>
-
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required placeholder="Your Email">
           </div>
-        </div>
-      </section>
 
-
-  </main>
-
-  <footer id="footer" class="footer light-background">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">Address:</h3>
-            <p class="mb-4">
-              2nd Floor JSO Building, 210 Katipunan Avenue, Blue Ridge A, Quezon City
-            </p>
-            <p class="mb-0">
-              <a href="contact.html" class="btn-learn-more">Contact Us</a>
-            </p>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required placeholder="Subject">
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">Products</h3>
-            <ul class="list-unstyled float-start me-5">
-              <li><a href="#">OJO</a></li>
-              <li><a href="#">Pattex</a></li>
-              <li><a href="#">T-Rex</a></li>
-              <li><a href="#">Tangit</a></li>
-            </ul>
-            <ul class="list-unstyled float-start">
-              <li><a href="#">Ecoboards</a></li>
-              <li><a href="#">Smartflex</a></li>
-              <li><a href="#">Laticrete</a></li>
-            </ul>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
           </div>
+
+    <div class="loading">Sending message...</div>
+    <div class="sent-message">✅ Message sent successfully!</div>
+    <div class="error-message">❌ Failed to send message.</div>
+
+    <div class="text-center">
+      <button type="submit">Send Message</button>
         </div>
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">Connect with us</h3>
-            <ul class="list-unstyled social-icons light mb-3">
-              <li>
-                <a href="https://www.facebook.com/profile.php?id=61562783469999"><span class="bi bi-facebook"></span></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/ecozmartph/"><span class="bi bi-instagram"></span></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/ecozmart/about/"><span class="bi bi-linkedin"></span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      </form>
 
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <div class="footer-subscribe">
-              <h3 class="widget-heading">Office Hours</h3>
-              <p class="mb-4">
-                Monday to Friday - 9:00am to 5:00pm<br>
-                Saturday  - 9:00am to 12:00pm
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
   <script>
-    function sendmail() {
-      const parms = {
+    function sendMail(e) {
+      e.preventDefault();
+
+      let params = {
         from_name: document.getElementById("name").value,
         reply_to: document.getElementById("email").value,
         subject: document.getElementById("subject").value,
         message: document.getElementById("message").value
       };
 
-      // Show loading
       document.querySelector(".loading").style.display = "block";
       document.querySelector(".error-message").style.display = "none";
       document.querySelector(".sent-message").style.display = "none";
 
-      emailjs.send("service_rqa9c3n", "template_d46nlpj", parms)
-        .then(function(response) {
+      // Send email to you
+      emailjs.send("service_rqa9c3n", "template_d46nlpj", params)
+        .then(function () {
+          // Send confirmation email to sender
+          return emailjs.send("service_rqa9c3n", "template_confirmation", params);
+        })
+        .then(function () {
           document.querySelector(".loading").style.display = "none";
           document.querySelector(".sent-message").style.display = "block";
-          document.querySelector("form").reset();
+          document.getElementById("contact-form").reset();
 
-          // ✅ Hide success message after 5 seconds
           setTimeout(() => {
             document.querySelector(".sent-message").style.display = "none";
-          }, 3000);
-        }, function(error) {
+          }, 5000);
+        })
+        .catch(function (error) {
           document.querySelector(".loading").style.display = "none";
           document.querySelector(".error-message").textContent = "❌ Failed to send: " + error.text;
           document.querySelector(".error-message").style.display = "block";
 
-          // ❌ Hide error message after 5 seconds
           setTimeout(() => {
             document.querySelector(".error-message").style.display = "none";
-          }, 3000);
+          }, 5000);
         });
     }
   </script>
 
-
 </body>
-
 </html>
