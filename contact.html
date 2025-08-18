@@ -71,71 +71,72 @@
   </section>
 
   <script>
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      let sendBtn = document.getElementById("send-btn");
-      let btnText = document.getElementById("btn-text");
-      let errorBox = document.querySelector(".error-message");
+    let sendBtn = document.getElementById("send-btn");
+    let btnText = document.getElementById("btn-text");
+    let errorBox = document.querySelector(".error-message");
 
-      let name = document.getElementById("name").value.trim();
-      let email = document.getElementById("email").value.trim();
-      let subject = document.getElementById("subject").value.trim();
-      let message = document.getElementById("message").value.trim();
-      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (!name || !email || !subject || !message) {
-        errorBox.textContent = "⚠️ Please fill in all fields.";
+    if (!name || !email || !subject || !message) {
+      errorBox.textContent = "⚠️ Please fill in all fields.";
+      errorBox.style.display = "block";
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      errorBox.textContent = "⚠️ Please enter a valid email address.";
+      errorBox.style.display = "block";
+      return;
+    }
+
+    errorBox.style.display = "none";
+    document.querySelector(".loading").style.display = "block";
+    document.querySelector(".sent-message").style.display = "none";
+
+    let params = { from_name: name, reply_to: email, subject: subject, message: message };
+
+    // --- SAFETY TIMEOUT (3 seconds) ---
+    let timeout = setTimeout(() => {
+      document.querySelector(".loading").style.display = "none";
+      errorBox.textContent = "⚠️ Request timed out. Please try again.";
+      errorBox.style.display = "block";
+    }, 3000);
+
+    emailjs.send("service_rqa9c3n", "template_d46nlpj", params)
+      .then(function () {
+        clearTimeout(timeout);
+        document.querySelector(".loading").style.display = "none";
+        document.querySelector(".sent-message").style.display = "block";
+
+        sendBtn.classList.remove("btn-primary");
+        sendBtn.classList.add("btn-success");
+        btnText.textContent = "✅ Sent!";
+
+        document.getElementById("contact-form").reset();
+
+        setTimeout(() => {
+          document.querySelector(".sent-message").style.display = "none";
+          sendBtn.classList.remove("btn-success");
+          sendBtn.classList.add("btn-primary");
+          btnText.textContent = "Send";
+        }, 3000);
+      })
+      .catch(function (error) {
+        clearTimeout(timeout);
+        document.querySelector(".loading").style.display = "none";
+        errorBox.textContent = "❌ Failed to send: " + error.text;
         errorBox.style.display = "block";
-        return;
-      }
 
-      if (!emailPattern.test(email)) {
-        errorBox.textContent = "⚠️ Please enter a valid email address.";
-        errorBox.style.display = "block";
-        return;
-      }
-
-      errorBox.style.display = "none";
-      document.querySelector(".loading").style.display = "block";
-      document.querySelector(".sent-message").style.display = "none";
-
-      let params = {
-        from_name: name,
-        reply_to: email,
-        subject: subject,
-        message: message
-      };
-
-      emailjs.send("service_rqa9c3n", "template_d46nlpj", params)
-        .then(function () {
-          document.querySelector(".loading").style.display = "none";
-          document.querySelector(".sent-message").style.display = "block";
-
-          sendBtn.classList.remove("btn-primary");
-          sendBtn.classList.add("btn-success");
-          btnText.textContent = "✅ Sent!";
-
-          document.getElementById("contact-form").reset();
-
-          setTimeout(() => {
-            document.querySelector(".sent-message").style.display = "none";
-            sendBtn.classList.remove("btn-success");
-            sendBtn.classList.add("btn-primary");
-            btnText.textContent = "Send";
-          }, 3000);
-        })
-        .catch(function (error) {
-          document.querySelector(".loading").style.display = "none";
-          errorBox.textContent = "❌ Failed to send: " + (error.text || error);
-          errorBox.style.display = "block";
-
-          setTimeout(() => {
-            errorBox.style.display = "none";
-          }, 3000);
-        });
-    });
-  </script>
-
-</body>
-</html>
+        setTimeout(() => {
+          errorBox.style.display = "none";
+        }, 3000);
+      });
+  });
+</script>
