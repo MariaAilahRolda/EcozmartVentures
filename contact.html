@@ -41,8 +41,8 @@
         <h2>Contact Us</h2>
       </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form"></form>
-      <div class="progress-container">  
+      <form id="contact-form" class="php-email-form">
+      <div class="progress-container">
       <div class="progress-bar"></div>
       </div>
         <div class="row gy-4">
@@ -63,9 +63,9 @@
             
             <!-- Spinner Loading -->
             <div class="loading">Sending your message...</div>
-            <div class="error-message">❌ Oops! Something went wrong. please try again.</div>
-            <div class="sent-message">Your message has been sent successfully!</div>            
-            <button type="submit" id="send-btn" class="btn btn-primary">
+            <div class="error-message text-danger" style="display:none;">❌ Oops! Something went wrong. please try again.</div>
+            <div class="sent-message text-success" style="display:none;">✅ Your message has been sent successfully!</div>            
+            <button type="submit" id="send-btn" class="btn btn-primary mt-2">
               <span id="btn-text">Send</span>
             </button>
           </div>
@@ -78,49 +78,26 @@
   <script>
 
     document.addEventListener("DOMContentLoaded", function() {
-      const form = document.querySelector(".php-email-form");
+      const form = document.getElementById("contact-form");
       const progressBar = document.querySelector(".progress-bar");
+      const loading = document.querySelector(".loading");
+      const errorBox = document.querySelector(".error-message");
+      const succesBox = document.querySelector(".sent-message");
+      const sendBtn = document.getElementById("send-btn");
+      const btnText = document.getElementById("btn-text");
 
-      if (form) {
-        form.addEventListener("submit", function (e) {
-          progressBar.style.width = "0%";
-
-          let width = 0;
-          const interval = setInterval(() => {
-            if (width >=90) {
-              clearInterval(interval);
-            } else {
-              width+= 10;
-              progressBar.style.width = width + "%";
-            }
-          }, 300);
-        });
-
-        form.addEventListener("ajax:success", function() {
-          progressBar.style.width = "100%";
-          setTimeout(() => {
-            progressBar.style.width = "0%";
-          }, 2000);
-        });
-
-        form.addEventListener("ajax:error", function() {
-          progressBar.style.width = "0%";
-        });
+      <form.addEventListener("submit", function (e) {
+        e.preventDefault();
       }
-    });
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      let sendBtn = document.getElementById("send-btn");
-      let btnText = document.getElementById("btn-text");
-      let errorBox = document.querySelector(".error-message");
+      // Get form values
 
       let name = document.getElementById("name").value.trim();
       let email = document.getElementById("email").value.trim();
       let subject = document.getElementById("subject").value.trim();
       let message = document.getElementById("message").value.trim();
       let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+      
+      // Validation
       if (!name || !email || !subject || !message) {
         errorBox.textContent = "⚠️ Please fill in all fields.";
         errorBox.style.display = "block";
@@ -134,40 +111,48 @@
       }
 
       errorBox.style.display = "none";
-      document.querySelector(".loading").style.display = "block";
-      document.querySelector(".sent-message").style.display = "none";
+      succesBox.style.display = "none";
+      loading.style.display = "block";
+      btnText.textContent = "Sending...";
 
-      let params = {
+      let width = 0;
+      const interval = setInterval(() => {
+        if (width >= 90) clearInterval(interval);
+        else {
+          width += 10;
+          progressBar.style.width = width + "%";
+        }
+      }, 300);
+      
+      // send email via EmailJS
+      emailjs.send("service_rqa9c3n", "template_d46nlpj", {
         from_name: name,
         reply_to: email,
         subject: subject,
-        message: message
-      };
-
-      emailjs.send("service_rqa9c3n", "template_d46nlpj", params)
+        message: message 
+      })
         .then(function () {
-          document.querySelector(".loading").style.display = "none";
-          let succesBox = document.querySelector(".sent-message");
+          clearInterval(interval);
+          progressBar.style.width = "100%";
+          loading.style.display = "none";
           succesBox.style.display = "block";
-
-
           sendBtn.classList.remove("btn-primary");
           sendBtn.classList.add("btn-success");
-          btnText.textContent = "✅ Sent!";
-
-
-          document.getElementById("contact-form").reset();
-
+          btnText.textContent = "Sent";
+          form.reset();
           setTimeout(() => {
+            progressBar.style.width = "0%";
             succesBox.style.display = "none";
-          }, 4000);
-          document.getElementById("contact-form").reset();
+            sendBtn,classList.remove("btn-primary");
+            btnText.textContent = "send";
+          }. 4000);
         })
-        .catch(function () {
-          document.querySelector(".loading").style.display = "none";
-          let errorBox = document.querySelector(".error-message");
+        .catch(function() {
+          clearInterval(interval);
+          loading.style.display = "none";
           errorBox.style.display = "block";
-
+          progressBar.style.width = "0%";
+          btnText.textContent = "Send";
           setTimeout(() => {
             errorBox.style.display = "none";
           }, 4000);
