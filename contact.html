@@ -2,32 +2,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta content="width=device, initial-scale=1.0" name="viewport">
   <title>Ecozmart Ventures Incorporated</title>
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
+  <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
 
-  <!-- Bootstrap & Icons -->
+  <!--Bootstrap & Icons -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Main CSS -->
+  <!--Main CSS-->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!--EmailJS-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist.min.js"></script>
   <script>
-    (function () {
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
+    (function ()  {
+      email.init("bNs_OpK0HIWQ4dSOt"); // Replace with your EmailJS Public Key
     })();
   </script>
 </head>
@@ -53,11 +53,11 @@
             <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
           </div>
           <div class="col-md-12">
-            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Message"
-              required></textarea>
+            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Message" required>
+            </textarea>
           </div>
           <div class="col-md-12 text-center">
-            <div class="loading" style="display:none;">Loading...</div>
+            <div class="loading" style="display:none;"><Loading..."></div>
             <div class="error-message" style="display:none; color:red;"></div>
             <div class="sent-message" style="display:none; color:green;">Your message has been sent. Thank you!</div>
             <button type="submit" id="send-btn" class="btn btn-primary">
@@ -74,69 +74,9 @@
     document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      let sendBtn = document.getElementById("send-btn");
-      let btnText = document.getElementById("btn-text");
-      let errorBox = document.querySelector(".error-message");
-
-      let name = document.getElementById("name").value.trim();
-      let email = document.getElementById("email").value.trim();
-      let subject = document.getElementById("subject").value.trim();
-      let message = document.getElementById("message").value.trim();
-      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!name || !email || !subject || !message) {
-        errorBox.textContent = "⚠️ Please fill in all fields.";
-        errorBox.style.display = "block";
-        return;
-      }
-
-      if (!emailPattern.test(email)) {
-        errorBox.textContent = "⚠️ Please enter a valid email address.";
-        errorBox.style.display = "block";
-        return;
-      }
-
-      errorBox.style.display = "none";
-      document.querySelector(".loading").style.display = "block";
-      document.querySelector(".sent-message").style.display = "none";
-
-      let params = {
-        from_name: name,
-        reply_to: email,
-        subject: subject,
-        message: message
-      };
-
-      emailjs.send("service_rqa9c3n", "template_d46nlpj", params)
-        .then(function () {
-          document.querySelector(".loading").style.display = "none";
-          document.querySelector(".sent-message").style.display = "block";
-
-          sendBtn.classList.remove("btn-primary");
-          sendBtn.classList.add("btn-success");
-          btnText.textContent = "✅ Sent!";
-
-          document.getElementById("contact-form").reset();
-
-          setTimeout(() => {
-            document.querySelector(".sent-message").style.display = "none";
-            sendBtn.classList.remove("btn-success");
-            sendBtn.classList.add("btn-primary");
-            btnText.textContent = "Send";
-          }, 3000);
-        })
-        .catch(function (error) {
-          document.querySelector(".loading").style.display = "none";
-          errorBox.textContent = "❌ Failed to send: " + error.text;
-          errorBox.style.display = "block";
-
-          setTimeout(() => {
-            errorBox.style.display = "none";
-          }, 3000);
-        });
-    });
+      let
+    })
   </script>
-
+  
 </body>
-
 </html>
