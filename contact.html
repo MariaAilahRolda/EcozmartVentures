@@ -127,7 +127,7 @@
         })
         .catch(function (error) {
           document.querySelector(".loading").style.display = "none";
-          errorBox.textContent = "❌ Failed to send: " + error.text;
+          errorBox.textContent = "❌ Failed to send: " + (error.text || error);
           errorBox.style.display = "block";
 
           setTimeout(() => {
