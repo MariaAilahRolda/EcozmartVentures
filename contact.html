@@ -41,7 +41,10 @@
         <h2>Contact Us</h2>
       </div>
 
-      <form id="contact-form" role="form" class="php-email-form">
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form"></form>
+      <div class="progress-container">  
+      <div class="progress-bar"></div>
+      </div>
         <div class="row gy-4">
           <div class="col-md-6">
             <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
@@ -59,15 +62,9 @@
           <div class="col-md-12 text-center">
             
             <!-- Spinner Loading -->
-            <div class="loading d-flex align-items-center justify-content-center gap-2" style="display:none;">
-              <div class="spinner-border text-primary" role="status" style="width: 1.5rem; height: 1.5rem;">
-              </div>
-              <span>Sending...</span>
-            </div>
-
-            <div class="error-message" style="display:none; color:red;"></div>
-            <div class="sent-message" style="display:none; color:green;">Your message has been sent. Thank you!</div>
-            
+            <div class="loading">Sending your message...</div>
+            <div class="error-message">❌ Oops! Something went wrong. please try again.</div>
+            <div class="sent-message">Your message has been sent successfully!</div>            
             <button type="submit" id="send-btn" class="btn btn-primary">
               <span id="btn-text">Send</span>
             </button>
@@ -79,6 +76,38 @@
   </section>
 
   <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.querySelector(".php-email-form");
+      const progressBar = document.querySelector(".progress-bar");
+
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          progressBar.style.width = "0%";
+
+          let width = 0;
+          const interval = setInterval(() => {
+            if (width >=90) {
+              clearInterval(interval);
+            } else {
+              width+= 10;
+              progressBar.style.width = width + "%";
+            }
+          }, 300);
+        });
+
+        form.addEventListener("ajax:success", function() {
+          progressBar.style.width = "100%";
+          setTimeout(() => {
+            progressBar.style.width = "0%";
+          }, 2000);
+        });
+
+        form.addEventListener("ajax:error", function() {
+          progressBar.style.width = "0%";
+        });
+      }
+    });
     document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -118,29 +147,30 @@
       emailjs.send("service_rqa9c3n", "template_d46nlpj", params)
         .then(function () {
           document.querySelector(".loading").style.display = "none";
-          document.querySelector(".sent-message").style.display = "block";
+          let succesBox = document.querySelector(".sent-message");
+          succesBox.style.display = "block";
+
 
           sendBtn.classList.remove("btn-primary");
           sendBtn.classList.add("btn-success");
           btnText.textContent = "✅ Sent!";
 
+
           document.getElementById("contact-form").reset();
 
           setTimeout(() => {
-            document.querySelector(".sent-message").style.display = "none";
-            sendBtn.classList.remove("btn-success");
-            sendBtn.classList.add("btn-primary");
-            btnText.textContent = "Send";
-          }, 3000); // stays visible for 3s
+            succesBox.style.display = "none";
+          }, 4000);
+          document.getElementById("contact-form").reset();
         })
-        .catch(function (error) {
+        .catch(function () {
           document.querySelector(".loading").style.display = "none";
-          errorBox.textContent = "❌ Failed to send: " + error.text;
+          let errorBox = document.querySelector(".error-message");
           errorBox.style.display = "block";
 
           setTimeout(() => {
             errorBox.style.display = "none";
-          }, 3000);
+          }, 4000);
         });
     });
   </script>
