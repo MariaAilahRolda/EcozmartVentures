@@ -59,9 +59,8 @@
             <textarea name="message" id="message" class="form-control" rows="6" placeholder="Message"
               required></textarea>
           </div>
+          <!-- Spinner Loading -->
           <div class="col-md-12 text-center">
-            
-            <!-- Spinner Loading -->
             <div class="loading">Sending your message...</div>
             <div class="error-message text-danger" style="display:none;">❌ Oops! Something went wrong. please try again.</div>
             <div class="sent-message text-success" style="display:none;">✅ Your message has been sent successfully!</div>            
@@ -138,12 +137,13 @@
           succesBox.style.display = "block";
           sendBtn.classList.remove("btn-primary");
           sendBtn.classList.add("btn-success");
-          btnText.textContent = "Sent";
+          btnText.textContent = "Sent!";
           form.reset();
           setTimeout(() => {
             progressBar.style.width = "0%";
             succesBox.style.display = "none";
-            sendBtn,classList.remove("btn-primary");
+            sendBtn.classList.remove("btn-success");
+            sendBtn.classList.add("btn-primary")
             btnText.textContent = "send";
           }. 4000);
         })
