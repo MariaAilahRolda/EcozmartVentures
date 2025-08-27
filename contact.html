@@ -1,130 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ecozmart Ventures Incorporated</title>
 
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>
-      Ecozmart Ventures Incorporated
-    </title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon"> 
+  <link href="assets/img/favicon.png" rel="apple-touch-icon"> 
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/favicon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- Main CSS File -->
-    <link href="assets\css\main.css" rel="stylesheet">
-
-    <script src="script.js"></script>
-    <script type="text/javascript">
-    (function(){
-    emailjs.init("bNs_OpK0HIWQ4dSOt");
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("bNs_OpK0HIWQ4dSOt"); // ✅ Replace with your EmailJS Public Key
     })();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-      (function() {
-        emailjs.init("bNs_OpK0HIWQ4dSOt");
-      })();
-        </script>
-
-  </head>
+</head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-      </a>
+        <!-- Contact Info Column -->
+        <div class="col-lg-4">
+          <div class="info">
+            <h3>Better yet, see us in person!</h3>
+            <p>We love our customers, so feel free to visit during normal business hours.</p>
+            <div class="info-item d-flex">
+              <i class="bi bi-geo flex-shrink-0"></i>
+              <div>
+                <h4>Address:</h4>
+                <p>2nd Floor JSO building, 210 Katipunan Avenue, Blue Ridge A, Quezon City</p>
+              </div>
+            </div>
+            <div class="info-item d-flex">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h4>Email:</h4>
+                <p>info@ecozmart.ph</p>
+              </div>
+            </div>
+            <div class="info-item d-flex">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h4>Call:</h4>
+                <p>+632 8741 2272</p>
+              </div>
+            </div>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="index.html" class="nav-link" aria-disabled="false">Home</a>
-          </li>
-          <li>
-            <a href="products.html" class="nav-link" aria-disabled="false">Products</a>
-          </li>
-          <li>
-            <a href="about.html" class="nav-link" aria-disabled="true">About Us</a>
-          </li>
-          <li>
-            <a href="contact.html" class="nav-link active" aria-disabled="true">Contact Us</a>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="container">
-        <h1>Contact</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Contact Us</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section" data-aos="fade-up" data-aos-delay="200">
-        <div class="container" data-aos="fade">
-          <div class="row gy-5 gx-lg-5">
-
-            <!-- Contact Info Column -->
-            <div class="col-lg-4">
-              <div class="info">
-                <h3>Better yet, see us in person!</h3>
-                <p>We love our customers, so feel free to visit during normal business hours.</p>
-
-                <div class="info-item d-flex">
-                  <i class="bi bi-geo flex-shrink-0"></i>
-                  <div>
-                    <h4>Address:</h4>
-                    <p>2nd Floor JSO building, 210 Katipunan Avenue, Blue Ridge A, Quezon City</p>
-                  </div>
-                </div>
-
-                <div class="info-item d-flex">
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                  <div>
-                    <h4>Email:</h4>
-                    <p>info@ecozmart.ph</p>
-                  </div>
-                </div>
-
-                <div class="info-item d-flex">
-                  <i class="bi bi-telephone flex-shrink-0"></i>
-                  <div>
-                    <h4>Call:</h4>
-                    <p>+632 8741 2272</p>
-                  </div>
-                </div>
-
-                <div class="info-item d-flex">
+            <div class="info-item d-flex">
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h4>Location:</h4>
@@ -136,44 +79,113 @@
                     </div>
                   </div>
                 </div>
-
-              </div>
-            </div>
-
-            <!-- Contact Form Column-->
-            <div class="col-lg-8">
-              <form id="contact-form" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-6 form-group mb-3">
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
-                  </div>
-                  <div class="col-md-6 form-group mb-3">
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
-                  </div>
-                </div>
-                <div class="form-group mb-3">
-                  <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
-                </div>
-                <div class="form-group mb-3">
-                  <textarea name="message" id="message" rows="5" class="form-control" placeholder="Message"></textarea>
-                </div>
-
-                <!-- Feedback Messages -->
-                <div class="loading" style="display:none;">Loading...</div>
-                <div class="error-message alert alert-danger mt-2" style="display:none;"></div>
-                <div class="sent-message alert alert-success mt-2" style="display:none;">✅ Your message has been sent!</div>
-                <!-- Send Button -->
-                <button type="submit" id="send-btn" class="btn btn-primary w-100">
-                  <span id="btn-text">Send</span>
-                </button>
-              </form>
-            </div>
           </div>
         </div>
-      </section> 
-  </main>
+        <!-- Contact Form Column -->
+        <div class="col-lg-8">
+          <form id="contact-form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group mb-3">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="col-md-6 form-group mb-3">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
+            </div>
+            <div class="form-group mb-3">
+              <textarea name="message" id="message" rows="5" class="form-control" placeholder="Message"></textarea>
+            </div>
 
-  <footer id="footer" class="footer light-background">
+            <!-- Feedback Messages -->
+            <div class="loading text-center my-2" style="display:none;">Loading...</div>
+            <div class="error-message alert alert-danger mt-2" style="display:none;"></div>
+            <div class="sent-message alert alert-success mt-2" style="display:none;">✅ Your message has been sent!</div>
+
+            <!-- Send Button -->
+            <button type="submit" id="send-btn" class="btn btn-primary w-100">
+              <span id="btn-text">Send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("contact-form");
+      const loading = document.querySelector(".loading");
+      const errorBox = document.querySelector(".error-message");
+      const successBox = document.querySelector(".sent-message");
+      const sendBtn = document.getElementById("send-btn");
+      const btnText = document.getElementById("btn-text");
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let subject = document.getElementById("subject").value.trim();
+        let message = document.getElementById("message").value.trim();
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name || !email || !subject || !message) {
+          errorBox.textContent = "⚠️ Please fill in all fields.";
+          errorBox.style.display = "block";
+          return;
+        }
+        if (!emailPattern.test(email)) {
+          errorBox.textContent = "⚠️ Please enter a valid email address.";
+          errorBox.style.display = "block";
+          return;
+        }
+
+        // Reset states
+        errorBox.style.display = "none";
+        successBox.style.display = "none";
+        loading.style.display = "block";
+        btnText.textContent = "Sending...";
+
+        // Send email
+        emailjs.send("service_rqa9c3n", "template_d46nlpj", {
+          from_name: name,
+          reply_to: email,
+          subject: subject,
+          message: message
+        })
+        .then(function() {
+          loading.style.display = "none";
+          successBox.style.display = "block";
+          sendBtn.classList.remove("btn-primary");
+          sendBtn.classList.add("btn-success");
+          btnText.textContent = "Sent!";
+          form.reset();
+
+          setTimeout(() => {
+            successBox.style.display = "none";
+            sendBtn.classList.remove("btn-success");
+            sendBtn.classList.add("btn-primary");
+            btnText.textContent = "Send";
+          }, 4000);
+        })
+        .catch(function() {
+          loading.style.display = "none";
+          errorBox.style.display = "block";
+          btnText.textContent = "Send";
+
+          setTimeout(() => {
+            errorBox.style.display = "none";
+          }, 4000);
+        });
+      });
+    });
+  </script>
+</body>
+ <footer id="footer" class="footer light-background">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
@@ -186,7 +198,7 @@
               <a href="contact.html" class="btn-learn-more">Contact Us</a>
             </p>
           </div>
-        </div>
+          </div>
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
             <h3 class="widget-heading">Products</h3>
@@ -202,7 +214,7 @@
               <li><a href="#">Laticrete</a></li>
             </ul>
           </div>
-        </div>
+           </div>
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
             <h3 class="widget-heading">Connect with us</h3>
@@ -218,7 +230,7 @@
               </li>
             </ul>
           </div>
-        </div>
+          </div>
 
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
@@ -232,115 +244,7 @@
           </div>
         </div>
       </div>
+    </footer>
     </div>
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contact-form");
-    const progressBar = document.querySelector(".progress-bar");
-    const loading = document.querySelector(".loading");
-    const errorBox = document.querySelector(".error-message");
-    const successBox = document.querySelector(".sent-message");
-    const sendBtn = document.getElementById("send-btn");
-    const btnText = document.getElementById("btn-text");
-
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        // Get form values
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let subject = document.getElementById("subject").value.trim();
-        let message = document.getElementById("message").value.trim();
-        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // Validation
-        if (!name || !email || !subject || !message) {
-            errorBox.textContent = "⚠️ Please fill in all fields.";
-            errorBox.style.display = "block";
-            return;
-        }
-        if (!emailPattern.test(email)) {
-            errorBox.textContent = "⚠️ Please enter a valid email address.";
-            errorBox.style.display = "block";
-            return;
-        }
-
-        // Reset states
-        errorBox.style.display = "none";
-        successBox.style.display = "none";
-        loading.style.display = "block";
-        btnText.textContent = "Sending...";
-
-        // Progress bar animation
-        let width = 0;
-        const interval = setInterval(() => {
-            if (width >= 90) clearInterval(interval);
-            else {
-                width += 10;
-                progressBar.style.width = width + "%";
-            }
-        }, 300);
-
-        // Send email via EmailJS
-        emailjs.send("service_rqa9c3n", "template_d46nlpj", {
-            from_name: name,
-            reply_to: email,
-            subject: subject,
-            message: message
-        })
-        .then(function() {
-            clearInterval(interval);
-            progressBar.style.width = "100%";
-            loading.style.display = "none";
-            successBox.style.display = "block";
-            sendBtn.classList.remove("btn-primary");
-            sendBtn.classList.add("btn-success");
-            btnText.textContent = "Sent!";
-            form.reset();
-
-            setTimeout(() => {
-                progressBar.style.width = "0%";
-                successBox.style.display = "none";
-                sendBtn.classList.remove("btn-success");
-                sendBtn.classList.add("btn-primary");
-                btnText.textContent = "Send";
-            }, 4000);
-        })  
-        .catch(function() {
-            clearInterval(interval);
-            loading.style.display = "none";
-            errorBox.style.display = "block";
-            progressBar.style.width = "0%";
-            btnText.textContent = "Send";
-
-            setTimeout(() => {
-                errorBox.style.display = "none";
-            }, 4000);
-        });
-    });
-});
-</script>
-
-</body>
-
 </html>
