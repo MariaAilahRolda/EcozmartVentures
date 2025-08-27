@@ -23,11 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
     LeaksClear: "assets/img/products/OJO/LeaksClear.png",
     LeaksGrey: "assets/img/products/OJO/LeaksGrey.png",
 
-    Adhesive15: "assets/img/products/Pattex/Adhesive15.jpg",
-    Adhesive40: "assets/img/products/Pattex/Adhesive40.jpg",
+    Adhesive15: "assets/img/products/Pattex/Adhesive15.png",
+    Adhesive40: "assets/img/products/Pattex/Adhesive40.png",
 
     Tangit40:"assets/img/products/Tangit/Adhesive40g.png",
-    Tangit400:"assets/img/products/Tangit/Adhesive400g.png"
+    Tangit400:"assets/img/products/Tangit/Adhesive400g.png",
+
+    acryWhite:"assets/img/products/Pattex/acryWhite.png",
+    acryBrown:"assets/img/products/Pattex/acryBrown.png",
+    acryBlack:"assets/img/products/Pattex/acryBlack.png",
+    acryGrey:"assets/img/products/Pattex/acryGrey.png",
+
+    multiSealClear:"assets/img/products/Pattex/multiClear.png",
+    multiSealWhite:"assets/img/products/Pattex/multiWhite.png"
+
+
 
   };
 
