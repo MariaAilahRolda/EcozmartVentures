@@ -8,6 +8,9 @@
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon"> 
   <link href="assets/img/favicon.png" rel="apple-touch-icon"> 
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -18,8 +21,6 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -38,10 +39,7 @@
       opacity: 1;
       transition: opacity 0.6s ease;
     }
-    #preloader.fade-out {
-      opacity: 0;
-      pointer-events: none;
-    }
+    #preloader.fade-out { opacity: 0; pointer-events: none; }
     .spinner {
       border: 6px solid #f3f3f3;
       border-top: 6px solid #28a745;
@@ -66,13 +64,13 @@
   <!-- ===== Contact Section ===== -->
   <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
-      <div class="section-title">
+      <div class="section-title text-center">
         <h2>Contact</h2>
         <p>Home / Contact Us</p>
       </div>
 
       <div class="row">
-        <!-- Contact Info -->
+        <!-- Contact Info & Map -->
         <div class="col-lg-4">
           <div class="info">
             <h3>Better yet, see us in person!</h3>
@@ -123,42 +121,24 @@
 
   <!-- ===== Footer ===== -->
   <footer id="footer" class="footer light-background pt-5 pb-4">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">Address:</h3>
-            <p class="mb-4">2nd Floor JSO Building, 210 Katipunan Avenue, Blue Ridge A, Quezon City</p>
-            <p class="mb-0"><a href="#contact" class="btn-learn-more">Contact Us</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <h3>Office Hours</h3>
-          <p>Monday-Friday: 9:00am - 5:00pm<br>Sat: 9:00am - 12:00</p>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-12 text-center">
-          <p class="mb-0">&copy; 2025 Ecozmart Ventures Inc. All Rights Reserved.</p>
-        </div>
-      </div>
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 Ecozmart Ventures Inc. All Rights Reserved.</p>
     </div>
   </footer>
 
   <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     (function () {
-      emailjs.init("RbjuLX-z4wcc9JLuc"); // ✅ your public key
+      emailjs.init("RbjuLX-z4wcc9JLuc"); // ✅ replace with your actual public key
     })();
   </script>
 
@@ -182,14 +162,6 @@
       const successBox = document.querySelector(".sent-message");
       const sendBtn = document.getElementById("send-btn");
 
-      // Mobile nav toggle (if exists)
-      const el = document.querySelector(".mobile-nav-toggle");
-      if (el) {
-        el.addEventListener("click", () => {
-          document.querySelector("#navbar").classList.toggle("active");
-        });
-      }
-
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -209,10 +181,7 @@
         sendBtn.disabled = true;
 
         emailjs.send("service_rqa9c3n", "template_d46nlpj", {
-          name: name,
-          email: email,
-          subject: subject,
-          message: message
+          name, email, subject, message
         })
         .then(() => {
           loading.style.display = "none";
@@ -240,5 +209,6 @@
   </script>
 </body>
 </html>
+
 
 
