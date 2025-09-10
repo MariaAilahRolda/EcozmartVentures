@@ -15,7 +15,10 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+    if (!selectHeader) return; // stop if header not found
+    if (!selectHeader.classList.contains('scroll-up-sticky') &&
+        !selectHeader.classList.contains('sticky-top') &&
+        !selectHeader.classList.contains('fixed-top')) return; 
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
@@ -26,13 +29,15 @@
    * Mobile nav toggle
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
+  function mobileNavToggleBtn()) {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
+
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  if (mobileNavToggleBtn) {
+    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -72,6 +77,12 @@
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => { 
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   function toggleScrollTop() {
     if (scrollTop) {
