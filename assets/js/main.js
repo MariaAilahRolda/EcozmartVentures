@@ -92,7 +92,9 @@
       });
   }
   window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  document.addEventListener("DOMContentLoaded", () => {
+    // your code here
+  });
 
   /**
    * Animation on scroll function and init
