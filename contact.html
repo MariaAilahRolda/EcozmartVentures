@@ -3,9 +3,6 @@
 <head>
   <meta charset="utf-8"> 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="description" content="Ecozmart Ventures Inc. - Building materials and adhesives.">
-  <meta name="keywords" content="Ecozmart, OJO, Pattex, T-Rex, Tangit, Ecoboards, Smartflex, Laticrete">
-
   <title>Ecozmart Ventures Incorporated</title>
 
   <!-- Favicons -->
@@ -17,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Vendor CSS -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -27,172 +24,121 @@
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("RbjuLX-z4wcc9JLuc"); // ✅ Replace with your EmailJS Public Key
-    })();
-  </script>
-
-<!-- Smooth Scroll CSS -->
+  <!-- Preloader CSS -->
   <style>
-    html {
-      scroll-behavior: smooth; /* enables smooth scroll for anchor links */
+    #preloader {
+      position: fixed;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      z-index: 9999;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: opacity 0.6s ease;
     }
+    #preloader.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #28a745;
+      border-radius: 50%;
+      width: 50px; height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    html { scroll-behavior: smooth; } 
   </style>
 </head>
 
-<body class="index-page">
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
 
-  <!-- Contact Section -->
+  <!-- ===== Contact Section ===== -->
   <section id="contact" class="contact">
-    <div class="container">
-      <div class="row gy-5 gx-lg-5">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Home / Contact Us</p>
+      </div>
 
-        <!-- Contact Info Column -->
+      <div class="row">
+        <!-- Contact Info -->
         <div class="col-lg-4">
           <div class="info">
             <h3>Better yet, see us in person!</h3>
-            <p>We love our customers, so feel free to visit during normal business hours.</p>
-
-            <div class="info-item d-flex">
-              <i class="bi bi-geo flex-shrink-0"></i>
-              <div>
-                <h4>Address:</h4>
-                <p>2nd Floor JSO building, 210 Katipunan Avenue, Blue Ridge A, Quezon City</p>
-              </div>
-            </div>
-
-            <div class="info-item d-flex">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h4>Email:</h4>
-                <p>info@ecozmart.ph</p>
-              </div>
-            </div>
-
-            <div class="info-item d-flex">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h4>Call:</h4>
-                <p>+632 8741 2272</p>
-              </div>
-            </div>
-
-            <div class="info-item d-flex">
+            <div class="address">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h4>Location:</h4>
-                <div style="width: 100%">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
-                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-                  </iframe>
-                  </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
+                  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Contact Form Column -->
+        <!-- Contact Form -->
         <div class="col-lg-8">
           <form id="contact-form" class="php-email-form">
             <div class="row">
-              <div class="col-md-6 form-group mb-3">
-                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
               </div>
-              <div class="col-md-6 form-group mb-3">
-                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
               </div>
             </div>
-            <div class="form-group mb-3">
-              <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
+            <div class="form-group mt-3">
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
             </div>
-            <div class="form-group mb-3">
-              <textarea name="message" id="message" rows="5" class="form-control" placeholder="Message"></textarea>
+            <div class="form-group mt-3">
+              <textarea name="message" id="message" rows="5" class="form-control" placeholder="Message" required></textarea>
             </div>
 
-            <!-- Feedback Messages -->
+            <!-- Feedback -->
             <div class="loading text-center my-2" style="display:none;">Loading...</div>
             <div class="error-message alert alert-danger mt-2" style="display:none;"></div>
             <div class="sent-message alert alert-success mt-2" style="display:none;">✅ Your message has been sent!</div>
 
-            <!-- Send Button -->
-            <button type="submit" id="send-btn" class="btn btn-primary w-100">
-              <span id="btn-text">Send</span>
-            </button>
+            <div class="text-center mt-3">
+              <button type="submit" id="send-btn" class="btn btn-primary">Send Message</button>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer id="footer" class="footer light-background pt-5 pb-4">
     <div class="container">
       <div class="row g-4">
-
-        <!-- Address -->
         <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
           <div class="widget">
             <h3 class="widget-heading">Address:</h3>
-            <p class="mb-4">
-              2nd Floor JSO Building, 210 Katipunan Avenue, Blue Ridge A, Quezon City
-            </p>
-            <p class="mb-0">
-              <!-- smooth scroll link -->
-              <a href="#contact" class="btn-learn-more">Contact Us</a>
-            </p>
+            <p class="mb-4">2nd Floor JSO Building, 210 Katipunan Avenue, Blue Ridge A, Quezon City</p>
+            <p class="mb-0"><a href="#contact" class="btn-learn-more">Contact Us</a></p>
           </div>
         </div>
 
-<!-- Products -->
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">Products</h3>
-            <ul class="list-unstyled float-start me-5">
-              <li><a href="#">OJO</a></li>
-              <li><a href="#">Pattex</a></li>
-              <li><a href="#">T-Rex</a></li>
-              <li><a href="#">Tangit</a></li>
-            </ul>
-            <ul class="list-unstyled float-start">
-              <li><a href="#">Ecoboards</a></li>
-              <li><a href="#">Smartflex</a></li>
-              <li><a href="#">Laticrete</a></li>
-            </ul>
-          </div>
+        <div class="col-md-6 col-lg-3">
+          <h3>Office Hours</h3>
+          <p>Monday-Friday: 9:00am - 5:00pm<br>Sat: 9:00am - 12:00</p>
         </div>
-
-        <!-- Social Links -->
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">Connect with us</h3>
-            <ul class="list-unstyled social-icons light mb-3 d-flex gap-3">
-              <li><a href="https://www.facebook.com/profile.php?id=61562783469999"><span class="bi bi-facebook"></span></a></li>
-              <li><a href="https://www.instagram.com/ecozmartph/"><span class="bi bi-instagram"></span></a></li>
-              <li><a href="https://www.linkedin.com/company/ecozmart/about/"><span class="bi bi-linkedin"></span></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Office Hours -->
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <div class="footer-subscribe">
-              <h3 class="widget-heading">Office Hours</h3>
-              <p class="mb-4">
-                Monday to Friday - 9:00am to 5:00pm<br>
-                Saturday - 9:00am to 12:00pm
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Footer Bottom -->
       <div class="row mt-4">
         <div class="col-12 text-center">
           <p class="mb-0">&copy; 2025 Ecozmart Ventures Inc. All Rights Reserved.</p>
@@ -201,93 +147,98 @@
     </div>
   </footer>
 
-  <!-- JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-
-  <!-- EmailJS Form Script -->
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    (function () {
+      emailjs.init("RbjuLX-z4wcc9JLuc"); // ✅ your public key
+    })();
+  </script>
+
+  <!-- Preloader Script -->
+  <script>
+    window.addEventListener("load", function () {
+      const preloader = document.getElementById("preloader");
+      if (preloader) {
+        preloader.classList.add("fade-out");
+        setTimeout(() => preloader.remove(), 600);
+      }
+    });
+  </script>
+
+  <!-- Contact Form Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("contact-form");
       const loading = document.querySelector(".loading");
       const errorBox = document.querySelector(".error-message");
       const successBox = document.querySelector(".sent-message");
       const sendBtn = document.getElementById("send-btn");
-      const btnText = document.getElementById("btn-text");
 
-      form.addEventListener("submit", function(e) {
+      // Mobile nav toggle (if exists)
+      const el = document.querySelector(".mobile-nav-toggle");
+      if (el) {
+        el.addEventListener("click", () => {
+          document.querySelector("#navbar").classList.toggle("active");
+        });
+      }
+
+      form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let subject = document.getElementById("subject").value.trim();
-        let message = document.getElementById("message").value.trim();
-        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
 
         if (!name || !email || !subject || !message) {
           errorBox.textContent = "⚠️ Please fill in all fields.";
           errorBox.style.display = "block";
-          return;
-        }
-        if (!emailPattern.test(email)) {
-          errorBox.textContent = "⚠️ Please enter a valid email address.";
-          errorBox.style.display = "block";
+          setTimeout(() => errorBox.style.display = "none", 4000);
           return;
         }
 
-        // Reset states
-        errorBox.style.display = "none";
-        successBox.style.display = "none";
         loading.style.display = "block";
-        btnText.textContent = "Sending...";
-        sendBtn.disabled = false;
+        sendBtn.disabled = true;
 
-        // Send email via EmailJS
         emailjs.send("service_rqa9c3n", "template_d46nlpj", {
-          from_name: name,
-          reply_to: email,
+          name: name,
+          email: email,
           subject: subject,
           message: message
         })
-        .then(function() {
+        .then(() => {
           loading.style.display = "none";
           successBox.style.display = "block";
-          sendBtn.classList.remove("btn-primary");
-          sendBtn.classList.add("btn-success");
-          btnText.textContent = "Sent!";
           form.reset();
 
           setTimeout(() => {
             successBox.style.display = "none";
-            sendBtn.classList.remove("btn-success");
-            sendBtn.classList.add("btn-primary");
-            btnText.textContent = "Send";
             sendBtn.disabled = false;
           }, 4000);
         })
-        .catch(function(error) {
+        .catch((error) => {
           loading.style.display = "none";
           errorBox.textContent = "⚠️ Failed to send. Please try again.";
           errorBox.style.display = "block";
-          btnText.textContent = "Send";
-          sendBtn.disabled = false;
           console.error("EmailJS Error:", error);
 
           setTimeout(() => {
             errorBox.style.display = "none";
+            sendBtn.disabled = false;
           }, 4000);
         });
       });
     });
   </script>
-
-  </body>
+</body>
 </html>
 
 
