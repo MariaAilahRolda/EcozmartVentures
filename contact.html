@@ -28,11 +28,11 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     (function () {
-      emailjs.init("Vt_YuuBes8nJf7G4q"); // ✅ Replace with your EmailJS Public Key
+      emailjs.init("bNs_OpK0HIWQ4dSOt"); // ✅ Replace with your EmailJS Public Key
     })();
   </script>
 
-<!-- Smooth Scroll CSS -->
+  <!-- Smooth Scroll CSS -->
   <style>
     html {
       scroll-behavior: smooth; /* enables smooth scroll for anchor links */
@@ -41,6 +41,34 @@
 </head>
 
 <body class="index-page">
+    
+    <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="index.html" class="nav-link active" aria-disabled="false">Home</a>
+          </li>
+          <li>
+            <a href="products.html" class="nav-link" aria-disabled="false">Products</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link" aria-disabled="true">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link" aria-disabled="true">Contact Us</a>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
@@ -61,7 +89,7 @@
               </div>
             </div>
 
-<div class="info-item d-flex">
+            <div class="info-item d-flex">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h4>Email:</h4>
@@ -86,7 +114,7 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6529377216925!2d121.0697220757416!3d14.618836176628692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7724ed5b74f%3A0xa8f6dbe94a8f3d1d!2sEcozmart%20Ventures%20Incorporated!5e0!3m2!1sen!2sph!4v1742753273257!5m2!1sen!2sph"
                     width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
                   </iframe>
-</div>
+                </div>
               </div>
             </div>
           </div>
@@ -144,7 +172,7 @@
           </div>
         </div>
 
-<!-- Products -->
+        <!-- Products -->
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
             <h3 class="widget-heading">Products</h3>
@@ -174,7 +202,7 @@
           </div>
         </div>
 
- <!-- Office Hours -->
+        <!-- Office Hours -->
         <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
             <div class="footer-subscribe">
@@ -243,7 +271,7 @@
         sendBtn.disabled = true;
 
         // Send email via EmailJS
-        emailjs.send("service_mu77yfw", "template_2w5eb0m", {
+        emailjs.send("service_rqa9c3n", "template_d46nlpj", {
           from_name: name,
           reply_to: email,
           subject: subject,
@@ -283,5 +311,3 @@
 
 </body>
 </html>
-
-
